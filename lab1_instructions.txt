@@ -5,8 +5,8 @@ git --version
 
 B. Configure your identity.
 
-git config --global user.name "David Calderon"
-git config --global user.email "dacalderon.qu@gmail.com"
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL"
 
 C. Check your configuration.
 git config --list

@@ -1,0 +1,97 @@
+Step 1. Check your environment.
+
+A. Open your terminal and execute:
+git --version
+
+B. Configure your identity.
+
+git config --global user.name "David Calderon"
+git config --global user.email "dacalderon.qu@gmail.com"
+
+C. Check your configuration.
+git config --list
+
+Step 2. Create your first repository.
+
+A. Execute these commands one at a time.
+mkdir lab1
+cd lab1
+git init
+
+B. Create a README file.
+echo "# Lab 1" > README.md
+
+C. Check your repository.
+git status
+
+You should see README.md listed an an untracked file.
+
+Step 3. Stage and commit.
+
+A. Execute:
+git add README.md
+git status
+
+You should see README.md listed an a file to be committed.
+
+B. Execute:
+git commit -m "Initial commit: add README"
+
+C. Check your history.
+git log --oneline
+
+Your first commit have been created.
+
+Step 4. Create a branch.
+
+A. Run these commands:
+git branch feature/documentation
+git switch feature/documentation
+
+B. Add a new section to your README.
+echo "## Project Documentation" >> README.md
+echo "This repository is part of my Git training" >> README.md
+
+C. Check the changes.
+git status
+git diff
+
+D. Stage and commit them.
+git add README.md
+git commit - m "Add project documentation"
+
+Step 5. Understand your branches.
+
+A. Execute:
+git branch
+git log --oneline --all --graph
+
+You should see two branches:
+main: contains your initial commit
+feature/documentation: contains your new documentation commit
+
+Step 6. Your practical assessment.
+
+1. What was the purpose of executing git init? Explain what it created.
+The purpose of git init is to initialize a new local Git repository in the current directory. It creates the internal Git metadata structure and establishes the initial branch, which in our lab was called main.
+
+2. What changed after executing git add README.md? Explain the staging area.
+The README file was added to the staging area, meaning its current changes were selected for the next commit. Since it was a new file, Git also started tracking it.
+
+3. Why did we create feature/documentation instead of modifying main directly? Explain the benefit of branching.
+Best practices recommend creating a separate line of development to work on new features or modifications. Once the changes have been implemented, tested, and reviewed, they can be merged into the main branch through a pull request.
+
+4. What is the difference between git status and git log? Think about current state versus history.
+git status displays information about the current working tree and staging area, including modified, untracked, and staged files. On the other hand, git log displays the commit history of the current branch.
+
+5. Did your second commit modify main or feature/documentation? Explain why. Use your actual terminal results.
+The second commit modified the feature/documentation branch because I switched to that branch before making the changes. Therefore, the new commit was recorded in its history rather than in the main branch.
+
+Summary
+
+git init: Initializes a repository.
+git add: Stages changes.
+git commit: Records staged changes.
+git switch: Changes the active branch.
+git status and git log: Show current working state and commit history, respectively.
+git diff: It displays differences between file versions.

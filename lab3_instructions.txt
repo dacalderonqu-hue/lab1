@@ -1,0 +1,64 @@
+Step 1. Open a new PowerShell terminal in your project directory (lab1) and check your current state.
+git status
+git branch
+
+Step 2. Switch to the feature/documentation branch.
+git switch feature/documentation
+
+Step 3. Open README.md and replace its contents with this structure, then write the descriptions in your own words.
+
+
+# Git Training Lab
+
+## Introduction
+
+Describe the purpose of this project.
+
+## Objectives
+
+- Understand Git fundamentals.
+- Practice version control.
+- Work with local and remote repositories.
+- Learn Markdown documentation.
+
+## Technologies
+
+| Technology | Purpose |
+|---|---|
+| Git | Version control |
+| GitHub | Remote repository hosting |
+| Markdown | Technical documentation |
+
+## Git Workflow
+
+The following commands were used during this project:
+
+```bash
+git init
+git add README.md
+git commit -m "Initial commit"
+git branch feature/documentation
+git push -u origin feature/documentation
+```
+
+## Project Structure
+
+Explain the files and directories included in this repository.
+
+## Learning Outcomes
+
+Describe what you learned during the training.
+
+## References
+
+- [Git Documentation](https://git-scm.com/doc)
+- [GitHub Documentation](https://docs.github.com/)
+- [Markdown Guide](https://www.markdownguide.org/)
+
+Step 4. Validate your Markdown.
+
+1. Save README.md.
+2. Open it in VS Code.
+3. Use the Markdown preview shortcut: Ctrl + Shift + V.
+4. Check heading hierarchy, lists, tables, links, and code blocks.
+5. Correct formatting problems.
